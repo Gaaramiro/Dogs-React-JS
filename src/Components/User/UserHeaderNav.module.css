@@ -1,0 +1,130 @@
+.nav{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.nav a,
+.nav button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.2rem;
+  border: 1px solid transparent;
+  background-color: #eee;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: 0.1s ;
+}
+
+.nav a:hover,
+.nav button:hover,
+.nav a:focus,
+.nav button:focus{
+  background-color: white;
+  box-shadow: 0 0 0 3px #eee;
+  border-color: #333;
+  outline: none;
+}
+
+.nav a:global(.active){
+  background: white;
+  box-shadow: 0 0 0 3px #fea;
+  border-color: #fb1;
+}
+.nav a:global(.active) svg > * {
+  fill: #fb1;
+}
+
+
+.mobileButton{
+  background-color: #eee;
+  border-radius: 0.2rem;
+  border: 1px solid transparent;
+  padding: 0px .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  
+}
+.mobileButton::after{
+  content: '';
+  display: block;
+  background: currentColor;
+  height: 2px;
+  width: 1.2rem;
+  box-shadow: 0 6px 0 0px currentColor, 0 -6px 0 0px currentColor;
+  border-radius: 2px;
+  transition:  .2s;
+}
+
+.mobileButton:hover,
+.mobileButton:focus,
+.mobileButtonActive{
+  background-color: white;
+  box-shadow: 0 0 0 3px #fea;
+  border-color: #fb1;
+  color: #fb1;
+  outline: none;
+
+}
+.mobileButtonActive::after{
+  transform: rotate(90deg);
+  width: 4px;
+  height: 4px;
+  transition: transform .2s;
+}
+
+.navMobile{
+  display: block;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  padding: 0 1rem;
+  background: white;
+  box-shadow:  0 1px 2px rgba(0, 0, 0, .2);
+  border-radius: .2rem;
+  transform: translateX(-10px);
+  pointer-events: none;
+  opacity: 0;
+  transition: .2s;
+
+}
+
+.navMobile a,
+.navMobile button{
+  display: flex;
+  align-items: center;
+  padding:  .5rem 0;
+  margin: .5rem 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+}
+.navMobile a:hover svg > *,
+.navMobile button:hover svg > *{
+  fill: #fb1;
+}
+.navMobile button{
+  border-bottom: none;
+}
+
+.navMobile svg{
+  margin-right: .5rem ;
+}
+
+.navMobileActive{
+  opacity: 1;
+  pointer-events: initial;
+  z-index: 100;
+  transition: transform .2s;
+  transform: translateX(initial);
+}

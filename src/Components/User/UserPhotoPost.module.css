@@ -1,0 +1,22 @@
+.photoPost{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 2rem;
+  gap: 2rem;
+}
+
+@media(max-width:40rem){
+  .photoPost{
+    grid-template-columns: 1fr;
+  }
+}
+
+.imgFile{
+  margin-bottom: 1rem;
+}
+
+.preview{
+  background-size: cover;
+  border-radius: 4px;
+  background-position: center center;
+}
