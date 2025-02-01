@@ -9,7 +9,7 @@ function Header() {
   return (
     <header className={styles.header}>
       <nav className={`${styles.nav} container`}>
-        <Link className={styles.logo} to="/">
+        <Link className={styles.logo} to="/Dogs-React-JS">
           <Dogs />
         </Link>
         {data ? (
