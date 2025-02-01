@@ -20,7 +20,7 @@ const App = () => {
           <Header />
           <main className="AppBody">
             <Routes>
-              <Route path="/" element={<Home />}></Route>
+              <Route path="/Dogs-React-JS" element={<Home />}></Route>
               <Route path="login/*" element={<Login />}></Route>
               <Route path="foto/:id" element={<Photo user={User} />}></Route>
               <Route
